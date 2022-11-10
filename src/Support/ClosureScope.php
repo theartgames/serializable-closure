@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\SerializableClosure\Support;
+namespace Artgames\SerializableClosure\Support;
 
 use SplObjectStorage;
 

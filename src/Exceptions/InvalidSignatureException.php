@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\SerializableClosure\Exceptions;
+namespace Artgames\SerializableClosure\Exceptions;
 
 use Exception;
 

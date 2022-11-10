@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\SerializableClosure\Contracts;
+namespace Artgames\SerializableClosure\Contracts;
 
 interface Signer
 {

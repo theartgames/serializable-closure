@@ -1,19 +1,19 @@
 <?php
 
-namespace Laravel\SerializableClosure;
+namespace Artgames\SerializableClosure;
 
 use Closure;
-use Laravel\SerializableClosure\Exceptions\InvalidSignatureException;
-use Laravel\SerializableClosure\Exceptions\PhpVersionNotSupportedException;
-use Laravel\SerializableClosure\Serializers\Signed;
-use Laravel\SerializableClosure\Signers\Hmac;
+use Artgames\SerializableClosure\Exceptions\InvalidSignatureException;
+use Artgames\SerializableClosure\Exceptions\PhpVersionNotSupportedException;
+use Artgames\SerializableClosure\Serializers\Signed;
+use Artgames\SerializableClosure\Signers\Hmac;
 
 class SerializableClosure
 {
     /**
      * The closure's serializable.
      *
-     * @var \Laravel\SerializableClosure\Contracts\Serializable
+     * @var \Artgames\SerializableClosure\Contracts\Serializable
      */
     protected $serializable;
 
@@ -115,7 +115,7 @@ class SerializableClosure
      * @param  array  $data
      * @return void
      *
-     * @throws \Laravel\SerializableClosure\Exceptions\InvalidSignatureException
+     * @throws \Artgames\SerializableClosure\Exceptions\InvalidSignatureException
      */
     public function __unserialize($data)
     {

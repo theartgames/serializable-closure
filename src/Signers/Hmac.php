@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\SerializableClosure\Signers;
+namespace Artgames\SerializableClosure\Signers;
 
-use Laravel\SerializableClosure\Contracts\Signer;
+use Artgames\SerializableClosure\Contracts\Signer;
 
 class Hmac implements Signer
 {

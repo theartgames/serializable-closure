@@ -1,15 +1,15 @@
 <?php
 
-namespace Laravel\SerializableClosure\Serializers;
+namespace Artgames\SerializableClosure\Serializers;
 
 use Closure;
 use DateTimeInterface;
-use Laravel\SerializableClosure\Contracts\Serializable;
-use Laravel\SerializableClosure\SerializableClosure;
-use Laravel\SerializableClosure\Support\ClosureScope;
-use Laravel\SerializableClosure\Support\ClosureStream;
-use Laravel\SerializableClosure\Support\ReflectionClosure;
-use Laravel\SerializableClosure\Support\SelfReference;
+use Artgames\SerializableClosure\Contracts\Serializable;
+use Artgames\SerializableClosure\SerializableClosure;
+use Artgames\SerializableClosure\Support\ClosureScope;
+use Artgames\SerializableClosure\Support\ClosureStream;
+use Artgames\SerializableClosure\Support\ReflectionClosure;
+use Artgames\SerializableClosure\Support\SelfReference;
 use ReflectionObject;
 use UnitEnum;
 
@@ -39,7 +39,7 @@ class Native implements Serializable
     /**
      * The closure's reflection.
      *
-     * @var \Laravel\SerializableClosure\Support\ReflectionClosure|null
+     * @var \Artgames\SerializableClosure\Support\ReflectionClosure|null
      */
     protected $reflector;
 
@@ -60,7 +60,7 @@ class Native implements Serializable
     /**
      * The closure's scope.
      *
-     * @var \Laravel\SerializableClosure\Support\ClosureScope|null
+     * @var \Artgames\SerializableClosure\Support\ClosureScope|null
      */
     protected $scope;
 
@@ -206,7 +206,7 @@ class Native implements Serializable
      * Ensures the given closures are serializable.
      *
      * @param  mixed  $data
-     * @param  \Laravel\SerializableClosure\Support\ClosureScope  $storage
+     * @param  \Artgames\SerializableClosure\Support\ClosureScope  $storage
      * @return void
      */
     public static function wrapClosures(&$data, $storage)
@@ -292,7 +292,7 @@ class Native implements Serializable
     /**
      * Gets the closure's reflector.
      *
-     * @return \Laravel\SerializableClosure\Support\ReflectionClosure
+     * @return \Artgames\SerializableClosure\Support\ReflectionClosure
      */
     public function getReflector()
     {

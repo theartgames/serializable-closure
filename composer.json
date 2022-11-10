@@ -1,12 +1,8 @@
 {
-    "name": "laravel/serializable-closure",
+    "name": "artgames/serializable-closure",
     "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
     "keywords": ["laravel", "Serializable", "closure"],
     "license": "MIT",
-    "support": {
-        "issues": "https://github.com/laravel/serializable-closure/issues",
-        "source": "https://github.com/laravel/serializable-closure"
-    },
     "authors": [
         {
             "name": "Taylor Otwell",
@@ -28,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\SerializableClosure\\": "src/"
+            "Artgames\\SerializableClosure\\": "src/"
         }
     },
     "autoload-dev": {
