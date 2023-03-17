@@ -23,14 +23,22 @@ class Signed implements Serializable
     protected $closure;
 
     /**
+     * The closure's replacement code.
+     *
+     * @var array|null
+     */
+    protected $changedCode;
+
+    /**
      * Creates a new serializable closure instance.
      *
      * @param  \Closure  $closure
      * @return void
      */
-    public function __construct($closure)
+    public function __construct($closure, $code = null)
     {
         $this->closure = $closure;
+        $this->changedCode = $code;
     }
 
     /**
@@ -65,7 +73,7 @@ class Signed implements Serializable
         }
 
         return static::$signer->sign(
-            serialize(new Native($this->closure))
+            serialize(new Native($this->closure, $this->changedCode))
         );
     }
 

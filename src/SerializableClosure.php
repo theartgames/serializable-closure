@@ -23,15 +23,15 @@ class SerializableClosure
      * @param  \Closure  $closure
      * @return void
      */
-    public function __construct(Closure $closure)
+    public function __construct(Closure $closure, $code = null)
     {
         if (\PHP_VERSION_ID < 70400) {
             throw new PhpVersionNotSupportedException();
         }
 
         $this->serializable = Serializers\Signed::$signer
-            ? new Serializers\Signed($closure)
-            : new Serializers\Native($closure);
+            ? new Serializers\Signed($closure, $code)
+            : new Serializers\Native($closure, $code);
     }
 
     /**

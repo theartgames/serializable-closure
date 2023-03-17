@@ -51,6 +51,13 @@ class Native implements Serializable
     protected $code;
 
     /**
+     * The closure's replacement code.
+     *
+     * @var array|null
+     */
+    protected $changedCode;
+
+    /**
      * The closure's reference.
      *
      * @var string
@@ -75,9 +82,10 @@ class Native implements Serializable
      * @param  \Closure  $closure
      * @return void
      */
-    public function __construct(Closure $closure)
+    public function __construct(Closure $closure, $code = null)
     {
         $this->closure = $closure;
+        $this->changedCode = $code;
     }
 
     /**
@@ -137,7 +145,9 @@ class Native implements Serializable
             $use = call_user_func(static::$transformUseVariables, $reflector->getUseVariables());
         }
 
-        $code = $reflector->getCode();
+        $code = $this->changedCode != null
+            ? $code = $this->changedCode
+            : $code = $reflector->getCode();
 
         $this->mapByReference($use);
 
